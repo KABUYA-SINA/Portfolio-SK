@@ -1,0 +1,44 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../keyframes/animations';
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .2s;
+    background: $white-color;
+    width: 100%;
+    @include tablet{
+        background: transparent;
+    }
+    @include ordi{
+        background: $white-color;
+    }
+    @include largeOrdi{
+        background: transparent;
+    }
+    h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        @include mobile {
+            padding: nth($padding, 3) 10px;
+        }
+        @include tablet {
+            padding: nth($padding, 4)*1.5 17px;
+        }
+    }
+    & .header-link{
+        padding: nth($padding, 2) 0;
+    }
+}
+.nav-active {
+    @include navLink;
+}

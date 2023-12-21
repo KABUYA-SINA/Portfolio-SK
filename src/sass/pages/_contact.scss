@@ -1,0 +1,84 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../keyframes/animations';
+
+
+.head{
+    @include ordi{
+        background: transparent;
+    }
+}
+.foot {
+    @include ordi {
+        background: transparent;
+    }
+}
+.main-contact{
+    margin: 10vh 0 15vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: nth($gap, 4)*1.5;
+    width: 100%;
+    & .formulaire{
+        width: 100%;
+        @include tablet{
+            width: 70%;
+        }
+        & .form {
+            border-radius: 20px;
+            padding: nth($padding, 4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 95%;
+            margin: auto;
+            border: 10px solid;
+            border-image: linear-gradient(45deg, gold, deeppink) 1;
+            clip-path: inset(0px round 10px);
+            animation: huerotate 6s infinite linear;
+            filter: hue-rotate(360deg);
+            @include ordi {
+                width: 55%;
+            }
+            .for-form{
+                padding: nth($padding, 4) 0;
+            }
+            .for-form, & .btn-link {
+                position: relative;
+                width: 90%;
+                @include tablet {
+                    width: 70%;
+                }
+                @include ordi {
+                    width: 80%;
+                }
+                @include largeOrdi {
+                    width: 70%;
+                }
+                & .form-input {
+                    @include form-control;
+                }
+                & .btn-form, & .btn {
+                    @include btn;
+                    height: 50px;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    color: $white-color;
+                }
+                & .btn-form{
+                    background: #880808;
+                }
+            }
+        }
+        & .btn-link{
+            padding: 0;
+            & .btn{
+                width: 100%;
+                background: #525252;
+            }
+        }
+    }
+}

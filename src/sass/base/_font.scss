@@ -1,0 +1,97 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+// all h1
+.main-about,
+.main-contact,
+.main-projets{
+    h1, h2{
+        font-family: 'Shrikhand', serif;
+    }
+}
+//home
+.main-home{
+    h1{
+        font-size: 13rem;
+        @include tablet{
+            font-size: 30rem;
+        }
+        @include ordi{
+            font-size: 40rem;
+        }
+    }
+}
+//about
+.main-about{
+    h1{
+        text-transform: capitalize;
+        font-size: 3.3rem;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include ordi {
+            font-size: 4rem;
+        }
+    }
+    h2 {
+        font-size: 3rem;
+        text-transform: capitalize;
+    }
+    & .name{
+        font-weight: 500;
+    }
+}
+//isTyping
+.isTyping{
+    span{
+        font-size: 1rem;
+        @include tablet{
+            font-size: 1.5rem;
+        }
+    }
+}
+//projet
+.main-projets{
+    h1 {
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include ordi {
+            font-size: 4rem;
+        }
+    }
+    .details{
+        h2{
+            text-transform: capitalize;
+        }
+        p{
+            font-weight: 300;
+        }
+        .btn-details{
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+    & .hosted,
+    & .local{
+        text-transform: capitalize;
+    }
+}
+//contact
+.main-contact{
+    h1 {
+        text-transform: uppercase;
+        font-size: 3.3rem;
+        @include tablet {
+            font-size: 3rem;
+        }
+        @include ordi {
+            font-size: 4rem;
+        }
+    }
+    label{
+        text-transform: capitalize;
+    }
+}

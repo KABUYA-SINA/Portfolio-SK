@@ -1,0 +1,45 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../keyframes/animations';
+
+.main-home{
+    margin-top: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: nth($gap, 4)*2.5;
+    margin-bottom: nth($margin, 4)*4.5;
+    position: relative;
+    & .heading{
+        overflow: hidden;
+        height: 80vh;
+        animation: sliding-background 40s linear infinite;
+        background: url("https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat left / 120%;
+        text-align: center;
+        width: 100vw;
+        h1{
+            background: $white-color;
+            color: $white-color;
+            letter-spacing: 1vw;
+            line-height: 80vh;
+            margin: 0;
+            mix-blend-mode: lighten;
+            text-transform: uppercase;
+            $text-shadow: ();
+            width: 100%;
+            @for $i from 1 through $shadow {
+                $text-shadow: $text-shadow, 1px * $i 1px * $i $black-color;
+            }
+            text-shadow: 0 0 0px,
+            $text-shadow;
+            &:before {
+                color: $white-color;
+                content: attr(data-text);
+                margin-left: -1%;
+                margin-top: -1%;
+                position: absolute;
+            }
+        }
+    }
+}

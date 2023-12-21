@@ -1,0 +1,26 @@
+
+@keyframes sliding-background {
+    0%,
+    100% {
+        background-position: 0 40%;
+    }
+    50% {
+        background-position: 100% 40%;
+    }
+}
+
+@keyframes anim {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes huerotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rorate(360deg);
+    }
+}

@@ -1,0 +1,35 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../keyframes/animations';
+
+.foot{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 15vh;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition: .4s;
+    background: $white-color;
+    width: 100%;
+    @include tablet {
+        background: transparent;
+    }
+    @include ordi {
+        background: $white-color;
+    }
+    @include largeOrdi {
+        background: transparent;
+    }
+    & .footer-box{
+        text-align: center;
+        & .footer-link{
+            padding: nth($padding, 2) 0;
+        }
+    }
+}
+.nav-active {
+    @include navLink;
+}

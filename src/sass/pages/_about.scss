@@ -1,0 +1,81 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.main-about{
+    margin: 10vh 0 15vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: nth($gap, 4)*4.5;
+    margin-bottom: nth($margin, 4)*4;
+    & .about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: nth($gap, 4)*1.25;
+        p {
+            word-break: break-word;
+            text-align: left;
+            white-space: pre-wrap;
+            width: 80%;
+            @include largeOrdi {
+                width: 61%;
+            }
+        }
+    }
+    & .section-skills {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: nth($gap, 4)*1.5;
+        padding-top: nth($padding, 4);
+        width: 100%;
+        h2 {
+            border-bottom: solid 1px;
+        }
+        & .cards {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            width: 100%;
+            gap: nth($gap, 4)*1.5;
+            @include tablet {
+                width: 90%;
+                flex-direction: row;
+                gap: 0;
+            }
+            @include largeOrdi {
+                width: 70%;
+            }
+            & .first--cards,
+            & .second--cards,
+            & .third--cards {
+                width: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: nth($gap, 2)-3;
+                @include tablet {
+                    width: 25%;
+                    gap: nth($gap, 2);
+                }
+            }
+        }
+    }
+    & .presentation{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: nth($padding, 4);
+        width: 80%;
+        @include largeOrdi{
+            width: 61%;
+        }
+    }
+}

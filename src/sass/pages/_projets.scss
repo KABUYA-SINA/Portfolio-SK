@@ -1,0 +1,36 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.main-projets{
+    margin: 10vh 0 15vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: nth($gap, 4)*1.5;
+    @include tablet{
+        gap: nth($gap, 4)*4.5;
+    }
+    & .section-projets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: nth($gap, 4)*2.5;
+        flex-wrap: wrap;
+        width: 100%;
+        @include tablet{
+            width: 75%;
+        }
+        @include ordi{
+            width: 99.9%;
+            gap: nth($gap, 4)*1.5;
+        }
+        @include largeOrdi{
+            width: 74%;
+            gap: nth($gap, 4)*2.5;
+        }
+        @include xLarge{
+            width: 65%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.range-ratings{
+    display: flex;
+    align-items: center;
+    height: 5px;
+    & .rate-full{
+        background: #f4661b;
+        height: 100%;
+        width: 100%;
+    }
+    & .empty{
+        background: $white-color;
+        height: 100%;
+        width: 100%;
+        & .rate-empty {
+            background: #525252;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

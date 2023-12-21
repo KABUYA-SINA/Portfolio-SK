@@ -1,0 +1,9 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.head{
+    h1, & .projets{
+        text-transform: uppercase;
+        font-family: 'Shrikhand', serif;
+    }
+}

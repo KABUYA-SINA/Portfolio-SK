@@ -1,0 +1,24 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/base";
+@import "./base/header-typo";
+@import "./base/footer-typo";
+@import "./base/font";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/container";
+
+@import "./keyframes/animations";
+
+@import "./pages/error";
+@import "./pages/contact";
+@import "./pages/home";
+@import "./pages/cards";
+@import "./pages/form";
+@import "./pages/rating";
+@import "./pages/about";
+@import "./pages/isTyping";
+@import "./pages/projets";
+@import "./keyframes/animations";
