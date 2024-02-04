@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import projects from '../data/basePojects';
 import CardProjects from '../components/CardProjects';
+import ImageProjet from '../assets/images/projet.png';
 import { motion } from 'framer-motion';
 import '../sass/pages/_projets.scss';
 
@@ -34,7 +35,7 @@ const Projets = () => {
         >
             <Header />
             <main className='main-projets'>
-                <h1>Projets</h1>
+                <img src={ImageProjet} alt='projet logo' />
                 <section className="section-projets">
                     {
                         data.map((el, index) => (

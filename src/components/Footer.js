@@ -1,42 +1,32 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 import '../sass/layout/_footer.scss';
 import '../sass/base/_footer-typo.scss';
 
 
 const Footer = () => {
-    function translate3d() {
-        return `translate3d(-15px, -32px, 0) scale(1) rotate(270deg)`
-    }
-    function translated3bAbout() {
-        return `translate3d(4px, -25px, 0) scale(1) rotate(90deg)`
-    }
+
     return (
         <footer className='foot'>
-            <motion.div
-                className="footer-box"
-                transformTemplate={translate3d}
-            >
-                <NavLink
-                    to="/contact"
-                    className={(nav) => (nav.isActive ? 'nav-active footer-link' : 'footer-link')}
+            <div className="footer-box">
+                <Link to={'https://github.com/KABUYA-SINA'}
+                    aria-label={"github"} className={'footer-link'}
+                    target='_blank'
+                    rel='noreferrer'
                 >
-                    <span className='footer-span'>
-                        contact
-                    </span>
-                </NavLink>
-            </motion.div>
-            <motion.div
-                className='footer-box'
-                transformTemplate={translated3bAbout}
-            >
-                <NavLink to={'/about'}
-                    className={(nav) => (nav.isActive ? 'nav-active footer-link' : 'footer-link')}
+                    <FaGithub />
+                </Link>
+                <Link to={'https://linkedin.com/in/sina-sabrin'}
+                    aria-label={"linkedin"} className={'footer-link'}
+                    target='_blank'
+                    rel='noreferrer'
                 >
-                    <span className='footer-span'>about</span>
-                </NavLink>
-            </motion.div>
+                    <FaLinkedin />
+                </Link>
+            </div>
+            <p className='footer-p'>©2023 Kabuya Sina | All rights Reserved</p>
         </footer>
     )
 }

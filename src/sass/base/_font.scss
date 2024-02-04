@@ -23,45 +23,21 @@
 }
 //about
 .main-about{
-    h1{
-        text-transform: capitalize;
-        font-size: 3.3rem;
-        @include tablet {
-            font-size: 3rem;
-        }
-        @include ordi {
-            font-size: 4rem;
-        }
-    }
-    h2 {
-        font-size: 3rem;
-        text-transform: capitalize;
-    }
     & .name{
         font-weight: 500;
+    }
+    & .text-p{
+        text-align: center;
     }
 }
 //isTyping
 .isTyping{
     span{
-        font-size: 1rem;
-        @include tablet{
-            font-size: 1.5rem;
-        }
+        font-size: .9rem;
     }
 }
 //projet
 .main-projets{
-    h1 {
-        text-transform: uppercase;
-        font-size: 2.3rem;
-        @include tablet {
-            font-size: 3rem;
-        }
-        @include ordi {
-            font-size: 4rem;
-        }
-    }
     .details{
         h2{
             text-transform: capitalize;
@@ -81,16 +57,6 @@
 }
 //contact
 .main-contact{
-    h1 {
-        text-transform: uppercase;
-        font-size: 3.3rem;
-        @include tablet {
-            font-size: 3rem;
-        }
-        @include ordi {
-            font-size: 4rem;
-        }
-    }
     label{
         text-transform: capitalize;
     }

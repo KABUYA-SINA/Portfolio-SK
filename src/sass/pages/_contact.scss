@@ -2,25 +2,17 @@
 @import '../utils/mixins';
 @import '../keyframes/animations';
 
-
-.head{
-    @include ordi{
-        background: transparent;
-    }
-}
-.foot {
-    @include ordi {
-        background: transparent;
-    }
-}
 .main-contact{
-    margin: 10vh 0 15vh 0;
+    margin: 10vh 0 5vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: nth($gap, 4)*1.5;
     width: 100%;
+    img{
+        @include imagePages;
+    }
     & .formulaire{
         width: 100%;
         @include tablet{

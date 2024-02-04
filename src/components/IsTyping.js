@@ -8,7 +8,7 @@ const IsTyping = () => {
             <Typewriter
                 options={{
                     strings: ["Hello ! Je suis Sina S. KABUYA ",
-                        "Développeur web junior frontend. Conception des sites web et des applications web"
+                        "Développeur web junior frontend, conception des sites web et des applications web"
                     ],
                     autoStart: true,
                     loop: true,

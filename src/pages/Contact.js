@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import FormInput from '../components/Form/FormInput';
 import TextArea from '../components/Form/TextArea';
+import ImageConctat from '../assets/images/contact.png';
 import '../sass/base/_base.scss';
 import '../sass/base/_font.scss';
 import '../sass/pages/_contact.scss';
@@ -68,16 +69,23 @@ const Contact = () => {
     return (
         <motion.div
             className='container'
-            initial={{ opacity: 0, translateX: 50 }}
-            animate={{ opacity: 1, translateX: 0 }}
+            initial={{ opacity: 0, translateY: 50 }}
+            animate={{ opacity: 1, translateY: 0 }}
             transition={{
                 duration: .3,
                 ease: "easeInOut",
+                translateY: {
+                    type: "spring",
+                    damping: 9,
+                    stiffness: 50,
+                    restSpeed: 0.5,
+                    restDelta: 0.001
+                }
             }}
         >
             <Header />
             <main className="main-contact">
-                <h1>Contact</h1>
+                <img src={ImageConctat} alt='contact logo' />
                 <div className="formulaire">
                     <div className="form">
                         <form className='for-form' ref={form} onSubmit={handleSubmit}>
@@ -100,7 +108,6 @@ const Contact = () => {
                             </button>
                         </Link>
                     </div>
-
                 </div>
             </main>
             <Footer />

@@ -2,19 +2,21 @@
 @import '../utils/mixins';
 
 .main-about{
-    margin: 10vh 0 15vh 0;
+    margin: 10vh 0 2vh 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: nth($gap, 4)*4.5;
-    margin-bottom: nth($margin, 4)*4;
+    gap: nth($gap, 4)*2.5;
     & .about {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: nth($gap, 4)*1.25;
+        img{
+            @include imagePages;
+        }
         p {
             word-break: break-word;
             text-align: left;
@@ -33,8 +35,8 @@
         gap: nth($gap, 4)*1.5;
         padding-top: nth($padding, 4);
         width: 100%;
-        h2 {
-            border-bottom: solid 1px;
+        img{
+            @include imagePages;
         }
         & .cards {
             display: flex;
@@ -69,10 +71,10 @@
     }
     & .presentation{
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding-bottom: nth($padding, 4);
+        padding-top: nth($padding, 4)*2.5;
         width: 80%;
         @include largeOrdi{
             width: 61%;

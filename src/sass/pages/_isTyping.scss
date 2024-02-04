@@ -2,13 +2,10 @@
 @import '../utils/mixins';
 
 .isTyping{
-    width: 80%;
+    width: 90%;
     text-align: center;
     position: absolute;
     bottom: 2%;
-    @include ordi{
-        bottom: -10%;
-    }
     @include largeOrdi {
         width: 61%;
     }

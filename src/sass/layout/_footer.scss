@@ -4,32 +4,17 @@
 
 .foot{
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    height: 15vh;
-    z-index: 1000;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 10vh;
     transition: .4s;
-    background: $white-color;
     width: 100%;
-    @include tablet {
-        background: transparent;
-    }
-    @include ordi {
-        background: $white-color;
-    }
-    @include largeOrdi {
-        background: transparent;
-    }
+    padding: nth($padding, 4);
     & .footer-box{
         text-align: center;
         & .footer-link{
-            padding: nth($padding, 2) 0;
+            padding: nth($padding, 1);
         }
     }
-}
-.nav-active {
-    @include navLink;
 }

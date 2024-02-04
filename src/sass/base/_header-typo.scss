@@ -2,8 +2,14 @@
 @import '../utils/mixins';
 
 .head{
-    h1, & .projets{
-        text-transform: uppercase;
-        font-family: 'Shrikhand', serif;
+    h1{
+        font-size: .5rem;
+        @include tablet{
+            font-size: .7rem;
+        }
+    }
+    & .projets {
+        font-size: 27px;
+        padding: 5px;
     }
 }
