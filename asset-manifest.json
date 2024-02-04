@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "/Portfolio-SK/static/css/main.1b1e7ec9.css",
-    "main.js": "/Portfolio-SK/static/js/main.30b0bd5e.js",
+    "main.css": "/Portfolio-SK/static/css/main.2b09b4c9.css",
+    "main.js": "/Portfolio-SK/static/js/main.affa0cfa.js",
     "static/media/radar.webp": "/Portfolio-SK/static/media/radar.47059f8be0b47e94b96b.webp",
     "static/media/kanap.webp": "/Portfolio-SK/static/media/kanap.54ed02417c814955a6bf.webp",
     "static/media/help.webp": "/Portfolio-SK/static/media/help.9467d2fa420b83a11943.webp",
     "static/media/kasa.webp": "/Portfolio-SK/static/media/kasa.6f5eac9c13cdb3a3509f.webp",
     "static/media/ohmyfood.webp": "/Portfolio-SK/static/media/ohmyfood.f4710d9015e367b32439.webp",
     "static/media/panthere.webp": "/Portfolio-SK/static/media/panthere.9f2eb54b7e41fba9e1a9.webp",
+    "static/media/contact.png": "/Portfolio-SK/static/media/contact.cc10ca1d5af2913a0844.png",
+    "static/media/projet.png": "/Portfolio-SK/static/media/projet.fa674f4372c90eb198ac.png",
+    "static/media/icon.png": "/Portfolio-SK/static/media/icon.6d2cc13a8d560ad9b11b.png",
+    "static/media/about.png": "/Portfolio-SK/static/media/about.7eab0dbb4224778c2e79.png",
     "static/media/oac.webp": "/Portfolio-SK/static/media/oac.28bf63683c2c1c354298.webp",
     "static/media/piiquante.webp": "/Portfolio-SK/static/media/piiquante.c70c4c475f6365b08575.webp",
+    "static/media/skills.png": "/Portfolio-SK/static/media/skills.348f150ced8c1368b5f9.png",
     "static/media/futcha.webp": "/Portfolio-SK/static/media/futcha.32bb0e27c2241bd61e80.webp",
     "index.html": "/Portfolio-SK/index.html",
-    "main.1b1e7ec9.css.map": "/Portfolio-SK/static/css/main.1b1e7ec9.css.map",
-    "main.30b0bd5e.js.map": "/Portfolio-SK/static/js/main.30b0bd5e.js.map"
+    "main.2b09b4c9.css.map": "/Portfolio-SK/static/css/main.2b09b4c9.css.map",
+    "main.affa0cfa.js.map": "/Portfolio-SK/static/js/main.affa0cfa.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b1e7ec9.css",
-    "static/js/main.30b0bd5e.js"
+    "static/css/main.2b09b4c9.css",
+    "static/js/main.affa0cfa.js"
   ]
 }
