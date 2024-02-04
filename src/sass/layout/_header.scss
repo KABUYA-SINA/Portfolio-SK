@@ -15,10 +15,15 @@
     background: $white-color;
     width: 100%;
     padding: nth($padding, 1) nth($padding, 4);
+    width: 100%;
     & .logo{
         display: flex;
         align-items: center;
         height: 100%;
+        width: 45%;
+        @include ordi{
+            width: 5%;
+        }
         img {
             height: 100%;
             width: 100%;
