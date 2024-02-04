@@ -14,14 +14,20 @@
     transition: .2s;
     background: $white-color;
     width: 100%;
-    padding: nth($padding, 1) nth($padding, 4);
+    padding: nth($padding, 1) nth($padding, 3);
     width: 100%;
     & .logo{
         display: flex;
         align-items: center;
         height: 100%;
-        width: 45%;
+        width: 25%;
+        @include tablet{
+            width: 15%;
+        }
         @include ordi{
+            width: 12%;
+        }
+        @include largeOrdi{
             width: 5%;
         }
         img {
