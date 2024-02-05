@@ -4,6 +4,7 @@
 .head{
     h1{
         font-size: .5rem;
+        padding: nth($padding, 1);
         @include tablet{
             font-size: .7rem;
         }
