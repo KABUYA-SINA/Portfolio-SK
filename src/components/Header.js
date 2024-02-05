@@ -11,13 +11,16 @@ import '../sass/layout/_header.scss';
 const Header = () => {
 
     const history = useLocation()
+    let c = "Portfolio"
     function NameLocation() {
         const a = history.pathname.slice(1, history.pathname.length)
         let b = a.charAt(0).toUpperCase() + a.slice(1);
         if (b === "") {
-            return "Portfolio"
+            return c;
+        } else if (b === "Portfolio-SK/") {
+            return c;
         } else {
-            return b
+            return b;
         }
     }
 
