@@ -1,0 +1,67 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// GLOBAL PAGE CONTAINER
+// Dynamic layout wrapper
+// ========================
+
+.container
+    position: relative
+    isolation: isolate
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100dvh
+    overflow-x: hidden
+    transition: background vars.$transition-slow
+
+    &::before
+        content: ""
+        position: absolute
+        inset: 0
+        background: rgba(0, 0, 0, 0.45)
+        z-index: -1
+
+// ========================
+// PAGE CONTENT LAYER
+// ========================
+
+.container > *
+    position: relative
+    z-index: vars.$z-base
+
+// ========================
+// HOME PAGE
+// ========================
+
+.container[data-page="/"]
+    background: #111111 url('../../assets/pages/home.webp') no-repeat center / cover
+
+// ========================
+// PROJECTS PAGE
+// ========================
+
+.container[data-page="/projets"]
+    background: linear-gradient(
+        135deg,
+    #e3a57a,
+    #d6c7b3,
+    #cfd8d3,
+    #aab9d6,
+    #8a9ed1
+    )
+
+// ========================
+// ABOUT PAGE
+// ========================
+
+.container[data-page="/about"]
+    background: #111111 url('../../assets/pages/about.webp') no-repeat center / cover
+
+// ========================
+// CONTACT PAGE
+// ========================
+
+.container[data-page="/contact"]
+    background: linear-gradient(to right, #000000, #152331)

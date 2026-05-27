@@ -1,0 +1,24 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// CONTACT PAGE
+// ========================
+
+.main-contact
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    padding: vars.$spacing-lg
+
+    // ========================
+    // TITLE
+    // ========================
+
+    > .contact-title
+        text-align: center
+        margin-bottom: vars.$spacing-lg
+        font-size: clamp(1.5rem, 3vw, 2.5rem)
+        letter-spacing: 2px

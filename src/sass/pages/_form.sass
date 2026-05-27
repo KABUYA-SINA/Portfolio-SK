@@ -1,0 +1,91 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// FORM CONTAINER
+// ========================
+
+.form
+    display: flex
+    justify-content: center
+    align-items: center
+
+        // ========================
+        // FORM GROUP
+        // ========================
+
+    .form-group
+        display: flex
+        flex-direction: column
+        gap: vars.$spacing-xs
+        margin: vars.$spacing-md 0
+
+        .label
+            text-transform: capitalize
+
+            :is(label, input, textarea)
+                color: vars.$white-col
+
+        // ========================
+        // ERROR MESSAGE
+        // ========================
+
+        .alert
+            font-size: vars.$font-sm
+            padding: vars.$spacing-xs
+            color: vars.$secondary-color
+            display: none
+            transition: opacity vars.$transition-fast
+
+        input:invalid[data-focused="true"]
+            border: 1px solid vars.$secondary-color
+
+            & ~ .alert
+                display: block
+                opacity: 1
+
+        // ========================
+        // INPUT FIELD
+        // ========================
+
+        .form-input
+            @include mix.form
+
+            &:focus-visible
+                outline: 2px solid vars.$primary-color
+                outline-offset: 3px
+
+        input::placeholder,
+        textarea::placeholder
+            color: vars.$white-col
+            opacity: 0.6
+            font-size: vars.$font-sm
+
+    // ========================
+    // SUBMIT BUTTON
+    // ========================
+
+    .btn-form
+        @include mix.btn
+
+        padding: vars.$spacing-sm vars.$spacing-lg
+        margin-top: vars.$spacing-md
+        height: 42px
+
+        background: linear-gradient(
+            to right,
+            vars.$white-col,
+            #ECE9E6
+        )
+
+                color: vars.$black-col
+
+                display: inline-flex
+                align-items: center
+                justify-content: center
+
+        svg
+            font-size: 1.25rem
+
+            path
+                color: vars.$black-col

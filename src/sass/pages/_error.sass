@@ -1,0 +1,36 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// ERROR PAGE
+// ========================
+
+.error
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    min-height: 100dvh
+    gap: vars.$spacing-lg
+    padding: vars.$spacing-lg
+    text-align: center
+
+    // ========================
+    // ERROR BUTTON
+    // ========================
+
+    .btn-error
+        @include mix.btn
+
+        cursor: pointer
+        padding: vars.$spacing-sm vars.$spacing-lg
+        border: 1px solid vars.$black-col
+        border-radius: vars.$radius-md
+        transition: transform vars.$transition-fast
+
+        &:hover
+            transform: translateY(-2px)
+
+        &:focus-visible
+            outline: 2px solid vars.$primary-color
+            outline-offset: 3px

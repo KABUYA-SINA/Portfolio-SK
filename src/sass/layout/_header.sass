@@ -1,0 +1,56 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// HEADER LAYOUT
+// ========================
+
+.header
+    width: 100%
+    padding: vars.$spacing-lg clamp(1rem, 5vw, 3rem)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    // align-items: flex-start
+    align-items: center
+    gap: vars.$spacing-md
+    z-index: vars.$z-header
+
+    @include mix.screens(ordi)
+        flex-direction: row
+
+    .navigation
+        display: flex
+        align-items: center
+        gap: vars.$spacing-md
+
+        .logo-title
+            margin-right: vars.$spacing-sm
+
+        .menu
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            gap: vars.$spacing-md
+
+            :is(.home, .projects, .about, .contact) > a
+                position: relative
+                padding: vars.$spacing-xs
+                transition: color vars.$transition-fast
+
+                &:hover
+                    color: vars.$secondary-color
+
+                &:focus-visible
+                    outline: 2px solid vars.$secondary-color
+                    outline-offset: 4px
+
+                .sr-only
+                    @include mix.sr-only
+
+// ========================
+// ACTIVE NAVIGATION LINK
+// ========================
+
+.nav-active
+    @include mix.navLink

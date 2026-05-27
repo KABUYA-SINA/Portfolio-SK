@@ -1,0 +1,142 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Yesteryear&display=swap')
+
+// ========================
+// GLOBAL RESET
+// ========================
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    line-height: 1.5
+    letter-spacing: 0.5px
+    background: linear-gradient(180deg, #111111, #ffffff)
+    color: vars.$white-col
+    font-family: "Nunito", sans-serif
+    font-weight: 300
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-rendering: optimizeLegibility
+
+// ========================
+// ROOT APP CONTAINER
+// ========================
+
+#root
+    min-height: 100vh
+
+// ========================
+// TYPOGRAPHY
+// ========================
+
+h1,
+h2,
+h3,
+h4
+    font-family: "League Spartan", sans-serif
+    font-optical-sizing: auto
+    letter-spacing: 2px
+    line-height: 1.1
+    font-weight: 800
+
+h1
+    font-size: clamp(2rem, 5vw, 2.5rem)
+
+h2
+    font-size: clamp(1.7rem, 4vw, 2rem)
+
+h3
+    font-size: clamp(1.1rem, 3vw, 1.25rem)
+
+h4
+    font-size: clamp(1rem, 2vw, 1.2rem)
+
+p,
+span,
+li,
+a,
+button,
+label
+    font-size: vars.$font-xs
+
+// ========================
+// LINKS
+// ========================
+
+a
+    text-decoration: none
+    color: inherit
+
+// ========================
+// LISTS
+// ========================
+
+ul,
+ol
+    list-style: none
+
+// ========================
+// MEDIA ELEMENTS
+// ========================
+
+img,
+picture,
+video,
+canvas,
+svg
+    max-width: 100%
+
+// ========================
+// FORM ELEMENTS
+// ========================
+
+input,
+button,
+textarea,
+select
+    font: inherit
+
+textarea
+    resize: vertical
+
+button
+    cursor: pointer
+
+// ========================
+// ACCESSIBILITY
+// ========================
+
+:focus-visible
+    outline: 2px solid vars.$secondary-color
+    outline-offset: 3px
+
+@include mix.reduce-motion
+
+// ========================
+// HEADER
+// ========================
+
+.logo-title
+    font-size: vars.$font-xs
+
+:is(.home, .projects, .about, .contact) > a
+    font-size: vars.$font-lg
+
+// ========================
+// PROJECT CARD
+// ========================
+
+:is(.name-projet, .hosted, .local)
+    font-family: "Yesteryear", cursive
+    font-weight: 400
+    color: #a3846c

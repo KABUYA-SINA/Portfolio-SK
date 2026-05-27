@@ -1,0 +1,85 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// HOME PAGE LAYOUT
+// ========================
+
+.main-home
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    position: relative
+    gap: vars.$spacing-lg
+    padding: clamp(1rem, 4vw, 3rem)
+
+    @include mix.screens(ordi)
+        flex-direction: row
+        align-items: stretch
+
+    .sec-h_f,
+    .sec-h_t
+        display: flex
+        flex-direction: column
+        width: 100%
+        min-height: 400px
+        padding: clamp(1.5rem, 4vw, 3rem)
+
+        @include mix.screens(tablet)
+            max-width: 70%
+
+        @include mix.screens(ordi)
+            flex: 1
+            max-width: 45%
+
+        @include mix.screens(largeOrdi)
+            max-width: 35%
+
+    // ========================
+    // LEFT SECTION
+    // ========================
+
+    .sec-h_f
+        justify-content: flex-end
+        gap: vars.$spacing-lg
+
+        .btn
+            @include mix.btn
+
+            color: vars.$white-col
+            border: 1.5px solid vars.$white-col
+            background: transparent
+
+    // ========================
+    // RIGHT SECTION
+    // ========================
+
+    .sec-h_t
+        justify-content: space-between
+        background: rgba(0, 0, 0, 0.85)
+        backdrop-filter: blur(4px)
+        // border-radius: vars.$radius-md
+        box-shadow: vars.$shadow-lg
+
+        .sec-h-txt
+
+            .arrow-drp
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                gap: vars.$spacing-lg
+                margin-bottom: vars.$spacing-sm
+
+                svg
+                    font-size: clamp(1rem, 2vw, 1.25rem)
+
+        .btn-name
+            @include mix.btn
+
+            background: vars.$white-col
+            color: vars.$black-col
+
+        .sk
+            text-align: right

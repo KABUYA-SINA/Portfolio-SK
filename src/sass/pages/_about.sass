@@ -1,0 +1,64 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// ABOUT PAGE
+// ========================
+
+.main-about
+    position: relative
+
+    // ========================
+    // TITLE
+    // ========================
+
+    .about-title
+        text-align: center
+        margin-bottom: vars.$spacing-lg
+
+    // ========================
+    // LIST SECTION
+    // ========================
+
+    .about-txt ol
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(1, minmax(min-content, 400px))
+        gap: vars.$spacing-md
+        width: 100%
+        justify-items: center
+        padding: vars.$spacing-lg
+        counter-reset: step
+
+        @include mix.screens(tablet)
+            grid-template-columns: repeat(2, minmax(min-content, 400px))
+
+        @include mix.screens(largeOrdi)
+            grid-template-columns: repeat(2, minmax(min-content, 600px))
+
+        li
+            counter-increment: step
+            display: flex
+            align-items: flex-start
+            gap: vars.$spacing-xs
+
+        li::before
+            content: counter(step)
+            font-size: vars.$font-xs
+            color: vars.$white-col
+
+    // ========================
+    // SKILLS SECTION
+    // ========================
+
+    .skills-s
+        width: 100%
+        margin: calc(vars.$spacing-lg * 2.5) 0
+        overflow: visible
+
+        .skills
+            width: 100%
+
+        .load-about
+            text-align: center
+            margin-top: vars.$spacing-md

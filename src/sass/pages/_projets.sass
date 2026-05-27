@@ -1,0 +1,36 @@
+@use '../utils/variables' as vars
+@use '../utils/mixins' as mix
+
+// ========================
+// PROJECTS PAGE
+// ========================
+
+.main-projects
+    position: relative
+    margin: calc(vars.$spacing-xl * 3) 0
+
+    // ========================
+    // TITLE
+    // ========================
+
+    .projects-title
+        text-align: center
+        margin-bottom: vars.$spacing-lg
+
+    // ========================
+    // PROJECT GRID
+    // ========================
+
+    .section-projets
+        display: grid
+        justify-items: center
+        grid-template-columns: repeat(1, minmax(280px, 1fr))
+        gap: vars.$spacing-md
+        width: 100%
+        padding: clamp(1rem, 3vw, 2rem)
+
+        @include mix.screens(tablet)
+            grid-template-columns: repeat(2, 1fr)
+
+        @include mix.screens(ordi)
+            grid-template-columns: repeat(3, 1fr)
