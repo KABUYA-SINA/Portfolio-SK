@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../sass/pages/_form.sass';
 
 export default function FormInput(props) {
   const [focused, setFocused] = useState(false)

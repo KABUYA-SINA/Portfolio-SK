@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../sass/pages/_form.sass';
 
 export default function TextArea(props) {
 
